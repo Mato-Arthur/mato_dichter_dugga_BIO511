@@ -26,7 +26,7 @@ for num in numbers:
         print(f'Repeat found:', abs_value) # Print the duplicate absolute value
         duplicates.append(abs_value) #Append to duplicates list for next if loop
         flag = False # Set flag to False to prevent further prints
-        if len(duplicates) == 0: # Check if no duplicates were found and if so, print message
+if len(duplicates) == 0: # Check if no duplicates were found and if so, print message
             print("No repeats found") 
 
 #Part 2
