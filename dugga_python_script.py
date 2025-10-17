@@ -1,9 +1,9 @@
 numbers = [15, -5, -12, 7, 10, -7, 3, -10, 4]
 
 #1a) For loop for absolute values greater than 10
-large_numbers = [] # List to store absolute values greater than 10
+large_numbers = [] # List to store absolute values greater or equal to 10
 for num in numbers:
-    if num > 10 or num < -10: # Check if absolute value is greater than 10
+    if abs(num) >= 10: # Check if absolute value is greater or equal to 10
         large_numbers.append(abs(num)) # Append absolute value to the list
 print(sum(large_numbers))
 
