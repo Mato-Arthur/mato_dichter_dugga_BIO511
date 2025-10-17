@@ -1,6 +1,6 @@
 numbers = [15, -5, -12, 7, 10, -7, 3, -10, 4]
 
-#1a) For loop for absolute values greater than 10
+#1a) For loop for absolute values greater or equal to 10
 large_numbers = [] # List to store absolute values greater or equal to 10
 for num in numbers:
     if abs(num) >= 10: # Check if absolute value is greater or equal to 10
@@ -41,7 +41,6 @@ data = pd.read_csv('brca_head500_genes.csv', sep=',')
 #2.2.1 Create a function, that plots a histogram of colum fpkm_log2 
 def plot_fpkm_histogram(data, output_file='fpkm_histogram.png'): #Set input and output paths
     """Reads the CSV file "data", then plots and saves a histogram of the fpkm_log2 column.""" #Function docstring
-    #plt.figure(figsize(10,8)) #Set figure size, caused an error so commented out
     plt.hist(data['fpkm_log2'], bins=30, edgecolor='black') #Plot histogram with suffiecient bins and black edges
     plt.title('Histogram of fpkm_log2') #Set title
     plt.xlabel('fpkm_log2') #Set x label
@@ -55,7 +54,7 @@ plot_fpkm_histogram(data)
 #2.2.3, same histogram but with different labels 
 def plot_fpkm_distribution(data, output_file='fpkm_distribution.png'):
     """Reads the CSV file "data", then plots and saves a histogram of log2(FPKM) values."""
-    plt.figure(figsize=(10,8)) # Set figure size, created no error this time 
+    plt.figure(figsize=(10,8)) # Set figure size for better visibility
     plt.hist(data['fpkm_log2'], bins=30, edgecolor='black')
     plt.title('Distribution of gene expression')
     plt.xlabel('Expression')
